@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>後端 on Tzu_An&#39;s Blog</title>
+    <link>https://ococo246453.github.io/tags/%E5%BE%8C%E7%AB%AF/</link>
+    <description>Recent content in 後端 on Tzu_An&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 25 Oct 2022 17:35:45 +0000</lastBuildDate><atom:link href="https://ococo246453.github.io/tags/%E5%BE%8C%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>.NET Core 三層式架構</title>
+      <link>https://ococo246453.github.io/post/net-core-%E4%B8%89%E5%B1%A4%E5%BC%8F%E6%9E%B6%E6%A7%8B/</link>
+      <pubDate>Tue, 25 Oct 2022 17:35:45 +0000</pubDate>
+      
+      <guid>https://ococo246453.github.io/post/net-core-%E4%B8%89%E5%B1%A4%E5%BC%8F%E6%9E%B6%E6%A7%8B/</guid>
+      <description>三層式架構 分層參考 加入參考 Controller(Application層) 參考 Service &amp;amp; Common Services 參考 Repository &amp;amp; Common Repository 參考 Common
+測試專案放在商業邏輯層(Service) 商業邏輯層(Service)負責處理商業邏輯 資料存取放在Repository Application層(Controller)處理資料進出 註冊生命週期 透過Application層的StartUp 各層Model命名規則 上圖左進右出
+各層都要嚴格控管資料進出的Model,命名規則如上圖
+可以透過工具來做轉換 (AutoMapper) 實際專案 Service &amp;amp; Repository &amp;amp; Common 都是類別庫 圖片引用自 三層式架構
+TDD開發 單元測試 使用套件: NUnit、NSubstitute、FluentAssertions
+Arrange Actual Assert 欲傳入參數 實際參數 比對兩值 圖片引用自 Sian的筆記
+參考 使用三層式架構來切分服務的關注點和職責吧</description>
+    </item>
+    
+  </channel>
+</rss>
