@@ -18,7 +18,8 @@
 可以透過工具來做轉換 (AutoMapper) 實際專案 Service &amp;amp; Repository &amp;amp; Common 都是類別庫 圖片引用自 三層式架構
 TDD開發 單元測試 使用套件: NUnit、NSubstitute、FluentAssertions
 Arrange Actual Assert 欲傳入參數 實際參數 比對兩值 圖片引用自 Sian的筆記
-參考 使用三層式架構來切分服務的關注點和職責吧</description>
+參考 使用三層式架構來切分服務的關注點和職責吧
+IHostedService </description>
     </item>
     
     <item>
