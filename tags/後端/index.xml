@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>後端 on Siaoyu's Blog</title><link>https://ococo246453.github.io/tags/%E5%BE%8C%E7%AB%AF/</link><description>Recent content in 後端 on Siaoyu's Blog</description><generator>Hugo</generator><language>zh-tw</language><lastBuildDate>Tue, 25 Oct 2022 17:35:45 +0000</lastBuildDate><atom:link href="https://ococo246453.github.io/tags/%E5%BE%8C%E7%AB%AF/index.xml" rel="self" type="application/rss+xml"/><item><title>.NET Core 三層式架構</title><link>https://ococo246453.github.io/posts/net-core-%E4%B8%89%E5%B1%A4%E5%BC%8F%E6%9E%B6%E6%A7%8B/</link><pubDate>Tue, 25 Oct 2022 17:35:45 +0000</pubDate><guid>https://ococo246453.github.io/posts/net-core-%E4%B8%89%E5%B1%A4%E5%BC%8F%E6%9E%B6%E6%A7%8B/</guid><description>三層式架構 分層參考 加入參考 Controller(Application層) 參考 Service &amp;amp; Common Services 參考 Repository &amp;amp; Common Repository 參考 Common
+測試專案放在商業邏輯層(Service) 商業邏輯層(Service)負責處理商業邏輯 資料存取放在Repository Application層(Controller)處理資料進出 註冊生命週期 透過Application層的StartUp 各層Model命名規則 上圖左進右出
+各層都要嚴格控管資料進出的Model,命名規則如上圖
+可以透過工具來做轉換 (AutoMapper) 實際專案 Service &amp;amp; Repository &amp;amp; Common 都是類別庫 圖片引用自 三層式架構
+TDD開發 單元測試 使用套件: NUnit、NSubstitute、FluentAssertions
+Arrange Actual Assert 欲傳入參數 實際參數 比對兩值 圖片引用自 Sian的筆記
+參考 使用三層式架構來切分服務的關注點和職責吧
+IHostedService</description></item><item><title>S.O.L.I.D原則</title><link>https://ococo246453.github.io/posts/s.o.l.i.d%E5%8E%9F%E5%89%87/</link><pubDate>Tue, 25 Oct 2022 17:35:45 +0000</pubDate><guid>https://ococo246453.github.io/posts/s.o.l.i.d%E5%8E%9F%E5%89%87/</guid><description>S.O.L.I.D原則 講師： Will保哥
+課程：.NET 技術講座：打造堅固耐用的 C# 程式碼
+圖片來源: Will保哥 .NET 技術講座：打造堅固耐用的 C# 程式碼 課程投影片
+耦合度 耦合度越高,代表程式之間的相依性越高,容易造成改A壞B的情況(==耦合是不可避免的==)
+內聚力 在一個模組內只完成一件事情,意味著這個模組可以被重複利用(例如發送通知) 低內聚的表現,意味著將所有的功能都寫在同一個class,造成難以維護、理解
+內聚力越高,類別越多,耦合度會增加
+耦合度越低,類別越少,內聚力降低
+兩者是互相衝突的,要靠當下的情境來判定使用
+學習S.O.L.I.D物件導向設計原則的好處 降低程式碼複雜度 較佳的程式碼可讀性 提升模組可重複利用姓 使模組具有高內聚低耦合 面臨需求變更時可減少破壞現有模組的風險 S.O.L.I.D 單一責任原則SRP (Single Responsibility Principle)
+SRP主要精神就是提高內聚力。每個類別盡量只做一件事。
+常見問題： 1.類別複雜度過高 2.維護時找不到要改哪 3.發生邏輯問題時找不到Bug在哪 4.使用類別時不知道應該呼叫哪個方法 使用時機： 在確認需求的情況下,如果只有一個類別需要用到這個方法,那就==不需要額外拉出==一個新的類別來為了做到SRP。 類別中有一段程式碼有重複利用的需求。 系統中有非必要的功能(未來的需求),老闆逼你要實作時,責任會依附在類別中,對維護造成困擾,這時候就可以透過SRP來實作。 開放封閉原則OCP (Open Closed Principle)
+開放擴充但封閉修改 藉由新的程式碼來擴充系統的功能,而不是藉由修改已存在的程式碼來擴充系統
+OCP的使用時機： 既有的類別已經被清楚定義,處於一個強調穩定的狀態 需要擴充現有的類別,加入新的屬性或方法 擔心修改現有的程式碼會破壞現有系統的運作 系統開始設計時就決定要採用OCP模式 ==可以透過&amp;quot;介面&amp;quot;或&amp;quot;抽象類別&amp;quot;進行實作==
+里氏替換原則LSP (Liskov Substitution Principle)
+建議使用==介面==來實作LSP,來降低耦合度。 LSP在實作時,要注意,實作的方式是否正確 ==子類別替換基底類別的時候不會報錯==
+介面隔離原則ISP (Interface Segregation Principle)
+把不同的屬性和方法,放在不同的介面中 特定需求沒用到的方法,不要加入介面中 使系統可以容易的達成鬆散耦合,安全重構,功能擴充
+ISP的使用時機： 當介面需要被分割的時候 假設類別有20個方法,並實作一個有15個方法的介面 有某個用戶端只會使用該類別中的10個方法 你就可以為這類別的10個方法定義介面並設定實作介面 你的用戶端就可以改用介面操作 這個過程可以用來降低主程式與這個類別的耦合力</description></item></channel></rss>

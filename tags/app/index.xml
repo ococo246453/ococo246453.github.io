@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>App on Siaoyu's Blog</title><link>https://ococo246453.github.io/tags/app/</link><description>Recent content in App on Siaoyu's Blog</description><generator>Hugo</generator><language>zh-tw</language><lastBuildDate>Tue, 25 Oct 2022 17:35:45 +0000</lastBuildDate><atom:link href="https://ococo246453.github.io/tags/app/index.xml" rel="self" type="application/rss+xml"/><item><title>Flutter</title><link>https://ococo246453.github.io/posts/flutter/</link><pubDate>Tue, 25 Oct 2022 17:35:45 +0000</pubDate><guid>https://ococo246453.github.io/posts/flutter/</guid><description>Flutter Github REST API CSM https://www.danielteng.com/courses/csm/
+環境安裝 官方文件
+Aki筆記
+新增環境變數
+cd $home ls -al nano .zshrc export PATH=&amp;quot;$PATH:/Users/${userName}/Documents/Libary/flutter/bin&amp;quot; 透過 flutter doctor 確認環境已設定完成
+在當前目錄開啟終端機
+安裝cocoapods前要先確定Ruby的安裝版本是否一致
+Install Ruby brew install ruby Install cocoapods sudo gem install cocoapods pod install 在M系列Mac上執行時,需要先執行以下指令
+sudo arch -x86_64 gem install ffi arch -x86_64 pod install 若在執行 Android Studio時出現 &amp;#34;Gradle project sync failed&amp;#34; 要去注意 Android Studio -&amp;gt; Tool -&amp;gt; SDK Manager -&amp;gt; SDK Platforms -&amp;gt; Show Package Details 版本最少安裝 Android 9(Pie) -&amp;gt; Android SDK Platform 28 IDE相關設定 Visual Studio Code Dart Flutter Code Spell Checker(檢查拼錯字) Indent-Rainbow(縮排變色) Material Icon Theme(文件圖標) Prettier - Code formatter(格式化插件) 若在Visual Studio Code中,字體顏色變成 檢查主題色彩是不是Dark+,若是選擇Dark則會有上圖的情況 調整後,如下圖 套件管理工具 HomeBrew</description></item></channel></rss>

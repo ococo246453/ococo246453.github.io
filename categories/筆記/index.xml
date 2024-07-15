@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>筆記 on Siaoyu's Blog</title><link>https://ococo246453.github.io/categories/%E7%AD%86%E8%A8%98/</link><description>Recent content in 筆記 on Siaoyu's Blog</description><generator>Hugo</generator><language>zh-tw</language><lastBuildDate>Tue, 25 Oct 2022 17:35:45 +0000</lastBuildDate><atom:link href="https://ococo246453.github.io/categories/%E7%AD%86%E8%A8%98/index.xml" rel="self" type="application/rss+xml"/><item><title>.NET Core 三層式架構</title><link>https://ococo246453.github.io/posts/net-core-%E4%B8%89%E5%B1%A4%E5%BC%8F%E6%9E%B6%E6%A7%8B/</link><pubDate>Tue, 25 Oct 2022 17:35:45 +0000</pubDate><guid>https://ococo246453.github.io/posts/net-core-%E4%B8%89%E5%B1%A4%E5%BC%8F%E6%9E%B6%E6%A7%8B/</guid><description>三層式架構 分層參考 加入參考 Controller(Application層) 參考 Service &amp;amp; Common Services 參考 Repository &amp;amp; Common Repository 參考 Common
+測試專案放在商業邏輯層(Service) 商業邏輯層(Service)負責處理商業邏輯 資料存取放在Repository Application層(Controller)處理資料進出 註冊生命週期 透過Application層的StartUp 各層Model命名規則 上圖左進右出
+各層都要嚴格控管資料進出的Model,命名規則如上圖
+可以透過工具來做轉換 (AutoMapper) 實際專案 Service &amp;amp; Repository &amp;amp; Common 都是類別庫 圖片引用自 三層式架構
+TDD開發 單元測試 使用套件: NUnit、NSubstitute、FluentAssertions
+Arrange Actual Assert 欲傳入參數 實際參數 比對兩值 圖片引用自 Sian的筆記
+參考 使用三層式架構來切分服務的關注點和職責吧
+IHostedService</description></item><item><title>Flutter</title><link>https://ococo246453.github.io/posts/flutter/</link><pubDate>Tue, 25 Oct 2022 17:35:45 +0000</pubDate><guid>https://ococo246453.github.io/posts/flutter/</guid><description>Flutter Github REST API CSM https://www.danielteng.com/courses/csm/
+環境安裝 官方文件
+Aki筆記
+新增環境變數
+cd $home ls -al nano .zshrc export PATH=&amp;quot;$PATH:/Users/${userName}/Documents/Libary/flutter/bin&amp;quot; 透過 flutter doctor 確認環境已設定完成
+在當前目錄開啟終端機
+安裝cocoapods前要先確定Ruby的安裝版本是否一致
+Install Ruby brew install ruby Install cocoapods sudo gem install cocoapods pod install 在M系列Mac上執行時,需要先執行以下指令
+sudo arch -x86_64 gem install ffi arch -x86_64 pod install 若在執行 Android Studio時出現 &amp;#34;Gradle project sync failed&amp;#34; 要去注意 Android Studio -&amp;gt; Tool -&amp;gt; SDK Manager -&amp;gt; SDK Platforms -&amp;gt; Show Package Details 版本最少安裝 Android 9(Pie) -&amp;gt; Android SDK Platform 28 IDE相關設定 Visual Studio Code Dart Flutter Code Spell Checker(檢查拼錯字) Indent-Rainbow(縮排變色) Material Icon Theme(文件圖標) Prettier - Code formatter(格式化插件) 若在Visual Studio Code中,字體顏色變成 檢查主題色彩是不是Dark+,若是選擇Dark則會有上圖的情況 調整後,如下圖 套件管理工具 HomeBrew</description></item><item><title>Hugo_架設自己的部落格 - Mac version</title><link>https://ococo246453.github.io/posts/hugo_%E6%9E%B6%E8%A8%AD%E8%87%AA%E5%B7%B1%E7%9A%84%E9%83%A8%E8%90%BD%E6%A0%BC---mac-version/</link><pubDate>Tue, 25 Oct 2022 17:35:45 +0000</pubDate><guid>https://ococo246453.github.io/posts/hugo_%E6%9E%B6%E8%A8%AD%E8%87%AA%E5%B7%B1%E7%9A%84%E9%83%A8%E8%90%BD%E6%A0%BC---mac-version/</guid><description>[Hugo]架設自己的部落格 - Mac version 安裝需要的工具 安裝 Homebrew （這邊要注意Intel chip / Apple chip 安裝方式略有不同，本文將以Apple chip 做示範） 首先開啟終端機，並執行 /bin/bash -c &amp;quot;$(curl -fsSL https://gitee.com/ineo6/homebrew-install/raw/master/install.sh)&amp;quot;
+在終端機透過 echo $SHELL的顯示結果修改環境變數，以下圖為例，顯示結果為 /bin/zsh 。 透過cd $home 回到根目錄，並執行nano .zshrc ，將 echo &amp;#39;eval &amp;#34;$(/opt/homebrew/bin/brew shellenv)&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.zprofile eval &amp;#34;$(/opt/homebrew/bin/brew shellenv)&amp;#34; 加入，執行 control+x 提示是否修改Y 按下 Enter(return) 離開編輯器。
+執行source ~/.zshrc套用剛剛的修改，或者重啟終端機。 開啟終端機，執行brew -v顯示安裝好的Homebrew版本，確認是否安裝成功。 2.安裝 Hugo
+在安裝前，先確認是否有安裝 Homebrew 前往 Hugo 依照對應的作業系統教學指示安裝，本篇文主要是以MacOS為主， 確認 Homebrew 有安裝成功後，執行brew install hugo等待安裝完成。 建立部落格 到想要的路徑執行hugo new site {名稱} 執行完畢後，會在該路徑產出{名稱}的資料夾，內容如下圖 挑選主題 前往 Hugo Theme 挑選想要套用的主題 以筆者為例 選擇 Hugo Theme m10c 作為套用的主題，在選擇主題時，建議注意 Updated 日期，確認作者還有在持續維護，也可以透過GitHub Stars來作為考量依據，確認無誤後，點擊Download前往GitHub。 3.</description></item><item><title>S.O.L.I.D原則</title><link>https://ococo246453.github.io/posts/s.o.l.i.d%E5%8E%9F%E5%89%87/</link><pubDate>Tue, 25 Oct 2022 17:35:45 +0000</pubDate><guid>https://ococo246453.github.io/posts/s.o.l.i.d%E5%8E%9F%E5%89%87/</guid><description>S.O.L.I.D原則 講師： Will保哥
+課程：.NET 技術講座：打造堅固耐用的 C# 程式碼
+圖片來源: Will保哥 .NET 技術講座：打造堅固耐用的 C# 程式碼 課程投影片
+耦合度 耦合度越高,代表程式之間的相依性越高,容易造成改A壞B的情況(==耦合是不可避免的==)
+內聚力 在一個模組內只完成一件事情,意味著這個模組可以被重複利用(例如發送通知) 低內聚的表現,意味著將所有的功能都寫在同一個class,造成難以維護、理解
+內聚力越高,類別越多,耦合度會增加
+耦合度越低,類別越少,內聚力降低
+兩者是互相衝突的,要靠當下的情境來判定使用
+學習S.O.L.I.D物件導向設計原則的好處 降低程式碼複雜度 較佳的程式碼可讀性 提升模組可重複利用姓 使模組具有高內聚低耦合 面臨需求變更時可減少破壞現有模組的風險 S.O.L.I.D 單一責任原則SRP (Single Responsibility Principle)
+SRP主要精神就是提高內聚力。每個類別盡量只做一件事。
+常見問題： 1.類別複雜度過高 2.維護時找不到要改哪 3.發生邏輯問題時找不到Bug在哪 4.使用類別時不知道應該呼叫哪個方法 使用時機： 在確認需求的情況下,如果只有一個類別需要用到這個方法,那就==不需要額外拉出==一個新的類別來為了做到SRP。 類別中有一段程式碼有重複利用的需求。 系統中有非必要的功能(未來的需求),老闆逼你要實作時,責任會依附在類別中,對維護造成困擾,這時候就可以透過SRP來實作。 開放封閉原則OCP (Open Closed Principle)
+開放擴充但封閉修改 藉由新的程式碼來擴充系統的功能,而不是藉由修改已存在的程式碼來擴充系統
+OCP的使用時機： 既有的類別已經被清楚定義,處於一個強調穩定的狀態 需要擴充現有的類別,加入新的屬性或方法 擔心修改現有的程式碼會破壞現有系統的運作 系統開始設計時就決定要採用OCP模式 ==可以透過&amp;quot;介面&amp;quot;或&amp;quot;抽象類別&amp;quot;進行實作==
+里氏替換原則LSP (Liskov Substitution Principle)
+建議使用==介面==來實作LSP,來降低耦合度。 LSP在實作時,要注意,實作的方式是否正確 ==子類別替換基底類別的時候不會報錯==
+介面隔離原則ISP (Interface Segregation Principle)
+把不同的屬性和方法,放在不同的介面中 特定需求沒用到的方法,不要加入介面中 使系統可以容易的達成鬆散耦合,安全重構,功能擴充
+ISP的使用時機： 當介面需要被分割的時候 假設類別有20個方法,並實作一個有15個方法的介面 有某個用戶端只會使用該類別中的10個方法 你就可以為這類別的10個方法定義介面並設定實作介面 你的用戶端就可以改用介面操作 這個過程可以用來降低主程式與這個類別的耦合力</description></item><item><title>如何分析產業資訊. 決定未來發展方向</title><link>https://ococo246453.github.io/posts/%E5%A6%82%E4%BD%95%E5%88%86%E6%9E%90%E7%94%A2%E6%A5%AD%E8%B3%87%E8%A8%8A.-%E6%B1%BA%E5%AE%9A%E6%9C%AA%E4%BE%86%E7%99%BC%E5%B1%95%E6%96%B9%E5%90%91/</link><pubDate>Tue, 25 Oct 2022 17:35:45 +0000</pubDate><guid>https://ococo246453.github.io/posts/%E5%A6%82%E4%BD%95%E5%88%86%E6%9E%90%E7%94%A2%E6%A5%AD%E8%B3%87%E8%A8%8A.-%E6%B1%BA%E5%AE%9A%E6%9C%AA%E4%BE%86%E7%99%BC%E5%B1%95%E6%96%B9%E5%90%91/</guid><description>如何分析產業資訊. 決定未來發展方向 講者：Happy Run - Beth Yeh 講者：Happy Run - Alison Yang
+1.目前的公司待得很好，沒有想換工作，還需要去外面看看產業狀況嗎？
+產業案例:Netflix
+每年都會要求員工去Interview一次，並取得比自己自身價值還要高的Offer 了解產業生態鏈的事情，及了解自身做的事情的價值（定期從市場取得反饋） 2.針對想看的產業跟公司，該從哪些方面著手呢？
+薪酬？
+透過獵頭取得薪酬報告（取得多份薪酬報告取中位數） 透過面試了解真實狀況 選擇？
+環境 家人生病，需要可以允許工作時離開公司的工作 趨勢 喜歡 了解自己有興趣的產品or產業 適合的獵頭？
+長時間觀察 有沒有用心了解求職者 對特定產業的了解 3.轉職前，你應該做什麼？
+釐清動清 因為豬隊友？ 評估風險 裸辭？若被新公司HR面試問到，上下份工作銜接的Gap該如何回答？ 家庭因素？ 報酬及砍掉重練的風險 心態的調整（更換產業需要有從零開始的心理準備） 如何選擇轉職最佳時機？ 1.三年（第一年熟悉新環境，第二年累積Skill，第三年做準備） 2.公司前途？（公司資金是否能否負荷三年，EX:新創公司可能會有資金問題...） 4.如何選擇及評估手中不同的Offer?
+善用SWOT分析
+Strengths（優勢） Weaknesses(劣勢) Opportunities(機會) Threats(風險) 公司未來成長性及產業前景性(了解公司是否有賺錢？)
+國內外公開發行公司財報 公司產業新聞 跟相關產業朋友問問 內部晉升及外部轉職機會
+內部晉升 每半年或每季都會和主管 1 on 1 ，要把握機會主動詢問 把握跨部門溝通的機會 想想自己在組織內的定位 外部轉職 問問現況還能學到什麼？ 擴大工作範圍，重新點燃工作熱忱 Follow your heart 公司氛圍/主管風格/同事相處
+面試時需要準備問題
+新公司的Team是如何自主學習的？ 面試主管平常如何在技術面自我成長？</description></item><item><title>敏捷開發</title><link>https://ococo246453.github.io/posts/%E6%95%8F%E6%8D%B7%E9%96%8B%E7%99%BC/</link><pubDate>Tue, 25 Oct 2022 17:35:45 +0000</pubDate><guid>https://ococo246453.github.io/posts/%E6%95%8F%E6%8D%B7%E9%96%8B%E7%99%BC/</guid><description>原則上敏捷式開發主要的精神在於較短的開發循環（建立在反覆式開發方式上）以及漸進式開發與交付。
+專案的成果，包含計畫、各類的需求細節、設計等都會隨著專案的進行而漸漸完整，而 非在一開始將所有的計畫與需求擬定完成。
+出自 https://www.projectup.net/article/view/id/15726(你真的搞懂了什麼叫敏捷式 ( Agile ) 開發嗎?)
+Scrum essential (Scrum=&amp;gt;來源自美式足球)
+圖片引用自 https://www.slideshare.net/ssusercab70d/scrum-essential 如上圖所示 Stakeholder向Product Owner提出自己的需求 Product Owner將需求轉換為Product Backlog 透過Sprint Planning Meeting後，將Product Backlog轉換為Sprint Backlog 在每一次的Sprint中，按照優先順序，進行一次Sprint(衝刺) 每次的衝刺中，都會進行Daily Scrum Meeting，確保進度 完成產出後，由Product Owner來驗收成果 整個Scrum流程做完後，進行Retrospective Meeting，檢討整個流程需要改進之處 出自 https://www.gvm.com.tw/article/72674 (Scrum參考) https://kevingo75.blogspot.com/2011/08/scrum.html (Scrum參考) https://medium.com/doflowy/%E4%BB%80%E9%BA%BC%E6%98%AFscrum-%E4%B8%8D%E6%98%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB%E4%B9%9F%E8%83%BD%E6%87%82%E7%9A%84scrum%E5%85%A5%E9%96%80%E6%95%99%E5%AD%B8-1cc6683575f8 (現實生活中的例子實用) 如果工作項目不明確、品管標準也不清楚，團隊就要浪費時間再釐清實際上要做什麼，而且還會常常發現必須等另一個團隊完成其他部分才能開始工作。
+Scrum 框架 規模化敏捷LeSS Scrum 專案管理 Stakeholder(Gakki為例：業務、客服、顧問) 使用者 負責提供需求,在Scrum中,稱之為故事(Story) Product Owner 整個Scrum的負責人 將使用者的Story轉換成Product Backlog 必須為使用者的Story排定重要性(Priority) Scrum Master 開發團隊的領導人 通常需要較深的開發經驗與技術知識背景 Scrum Team Member 完成產品需求 核心精神：讓團隊保持高度的彈性、自主性以及目標導向的精神。不會花心思在推卸責任、等待，而是積極地相互推動，直到完成目標。
+Sprint Retrospective(回顧) 檢討團隊在這個Sprint中的各種狀況,展示目前的工作成果,或者未來需要改善的地方。
+PO(產品負責人)和SM(Scrum Master)要和團隊一起討論,團隊在這個Sprint中有什麼需要改</description></item></channel></rss>
