@@ -1,0 +1,233 @@
+<!doctype html><html lang=zh-tw><head><title>Flutter // Siaoyu's Blog</title>
+<link rel="shortcut icon" href=/favicon.ico><meta charset=utf-8><meta name=generator content="Hugo 0.128.2"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content="John Doe"><meta name=description content="Flutter筆記"><link rel=stylesheet href=/css/main.min.5b1fcc8902588589c4767187402a3c29f8b8d7a6fdef6d9f8f77045bb0d14fee.css><meta name=twitter:card content="summary"><meta name=twitter:title content="Flutter"><meta name=twitter:description content="Flutter筆記"><meta property="og:url" content="https://ococo246453.github.io/posts/flutter/"><meta property="og:site_name" content="Siaoyu's Blog"><meta property="og:title" content="Flutter"><meta property="og:description" content="Flutter筆記"><meta property="og:locale" content="zh_tw"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2022-10-25T17:35:45+00:00"><meta property="article:modified_time" content="2022-10-25T17:35:45+00:00"><meta property="article:tag" content="App"></head><body><header class=app-header><a href=https://ococo246453.github.io/><img class=app-header-avatar src=/avatar.jpg alt="John Doe"></a>
+<span class=app-header-title>Siaoyu's Blog</span><p>由後端轉職為App工程師的開發者。 聯絡我：ococo246453@gmail.com</p><div class=app-header-social><a href=https://github.com/ococo246453 target=_blank rel="noreferrer noopener me"><svg viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github"><title>Github</title><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77 5.44 5.44.0 003.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"/></svg>
+</a><a href=https://www.facebook.com/ococo246453 target=_blank rel="noreferrer noopener me"><svg viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-facebook"><title>Facebook</title><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+</a><a href=mailto:ococo246453@gmail.com target=_blank rel="noreferrer noopener me"><svg viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-link"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></a></div></header><main class=app-container><article class=post><header class=post-header><h1 class=post-title>Flutter</h1><div class=post-meta><div><svg viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar"><title>calendar</title><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+Oct 25, 2022</div><div><svg viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock"><title>clock</title><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+5 min read</div><div><svg viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag"><title>tag</title><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83.0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+<a class=tag href=https://ococo246453.github.io/tags/app/>App</a></div></div></header><div class=post-content><h1 id=flutter>Flutter</h1><ul><li><strong><a href=https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api>Github REST API</a></strong></li></ul><h2 id=csm>CSM</h2><p><a href=https://www.danielteng.com/courses/csm/>https://www.danielteng.com/courses/csm/</a></p><h2 id=環境安裝>環境安裝</h2><ul><li><p><a href=https://docs.flutter.dev/get-started/install/macos>官方文件</a></p></li><li><p><a href=https://akiyu0924.gitbook.io/flutter/qian-zhi-zhun-bei-prepreparation>Aki筆記</a></p></li><li><p>新增環境變數</p><ul><li>cd $home</li><li>ls -al</li><li>nano .zshrc</li><li>export PATH="$PATH:/Users/${userName}/Documents/Libary/flutter/bin"</li></ul></li><li><p>透過 flutter doctor 確認環境已設定完成</p></li><li><p><strong><a href=https://blog.gtwang.org/mac-os-x/open-terminal-here-in-mac-os-finder/>在當前目錄開啟終端機</a></strong></p></li><li><p>安裝cocoapods前要先確定Ruby的安裝版本是否一致</p><ul><li>Install Ruby<ul><li>brew install ruby</li></ul></li><li>Install cocoapods<ul><li>sudo gem install cocoapods</li></ul></li></ul></li></ul><p><strong>pod install 在M系列Mac上執行時,需要先執行以下指令</strong></p><pre tabindex=0><code>sudo arch -x86_64 gem install ffi
+</code></pre><pre tabindex=0><code>arch -x86_64 pod install
+</code></pre><pre tabindex=0><code>若在執行 Android Studio時出現 &#34;Gradle project sync failed&#34;
+要去注意 Android Studio -&gt; Tool -&gt; SDK Manager -&gt; SDK Platforms -&gt; Show Package Details
+版本最少安裝 Android 9(Pie) -&gt; Android SDK Platform 28 
+</code></pre><h2 id=ide相關設定>IDE相關設定</h2><ul><li>Visual Studio Code<ul><li>Dart</li><li>Flutter</li><li>Code Spell Checker(檢查拼錯字)</li><li>Indent-Rainbow(縮排變色)</li><li>Material Icon Theme(文件圖標)</li><li>Prettier - Code formatter(格式化插件)</li></ul></li></ul><p><strong>若在Visual Studio Code中,字體顏色變成
+<img src=https://i.imgur.com/j7C7dCx.png alt>
+檢查主題色彩是不是Dark+,若是選擇Dark則會有上圖的情況</strong>
+<img src=https://i.imgur.com/xSiVisy.png alt>
+調整後,如下圖
+<img src=https://i.imgur.com/cWslaLQ.png alt></p><h2 id=套件管理工具>套件管理工具</h2><p><strong><a href=https://brew.sh/index_zh-tw>HomeBrew</a></strong></p><p><a href=https://zhuanlan.zhihu.com/p/341831809>安裝教學</a></p><p>M1晶片安裝完成後,需要額外執行以下語法,Homebrew才能使用</p><pre tabindex=0><code>echo &#39;eval &#34;$(/opt/homebrew/bin/brew shellenv)&#34;&#39; &gt;&gt; ~/.zprofile
+</code></pre><h2 id=method-channel>Method Channel</h2><ul><li><a href=https://flutter.cn/docs/development/platform-integration/platform-channels>撰寫雙平台代碼</a></li></ul><h2 id=套件>套件</h2><p>網路行為API呼叫需要同時import 這兩個</p><ul><li><p><strong><a href=https://pub.dev/packages/http>http: ^0.13.5</a> http</strong></p></li><li><p><strong><a href=https://pub.dev/packages/intl>intl: ^0.17.0</a> intl</strong></p></li><li><p><strong><a href=https://pub.dev>Pub Dev</a> 套件查詢網站</strong></p></li><li><p><strong><a href=https://pub.dev/packages/permission_handler>permission_handler</a> 權限管理</strong></p><ul><li><a href=https://www.wodecun.com/blog/8201.html>範例說明</a></li></ul></li><li><p><strong><a href=https://pub.dev/packages/showcaseview>showcaseview</a> 製作導引用</strong></p></li><li><p><strong><a href=https://pub.dev/packages/modal_bottom_sheet>modal_bottom_sheet</a> 下方彈窗</strong></p></li><li><p><strong><a href=https://pub.dev/packages/flutter_swipe_action_cell>flutter_swipe_action_cell</a> 滑動按鈕 <a href=https://github.com/luckysmg/flutter_swipe_action_cell/blob/master/README-CN.md>範例說明</a></strong></p></li><li><p><strong><a href=https://pub.dev/packages/shared_preferences>shared preferences</a> 儲存機制 <a href=https://www.liujunmin.com/flutter/shared_preferences_analysis.html>範例說明</a></strong></p></li><li><p><strong><a href=https://pub.dev/packages/flutter_easyloading>Easy Loading</a> 讀取動畫</strong></p></li><li><p><strong><a href=https://pub.dev/packages/flutter_downloader>flutter_downloader</a> 檔案下載 <a href=https://fluttercorner.com/how-to-download-file-from-url-and-save-in-local-storage-in-flutter/>範例說明</a></strong></p></li><li><p><strong><a href=https://pub.dev/packages/dropdown_button2>Dropdown_button2</a> 下拉式清單</strong></p></li><li><p><strong><a href=https://pub.dev/packages/easy_localization>Easy_localization</a> 多語系</strong></p></li></ul><p>若要做日期格式的多語系可參考
+==DateFormat(&lsquo;MM/dd EEEE&rsquo;, locale).format(now);==
+<a href=https://stackoverflow.com/questions/49807687/how-to-load-all-dart-dateformat-locale-in-flutter>日期多語系</a></p><ul><li><p><strong><a href=https://pub.dev/packages/camera>Camera</a> 相機</strong></p></li><li><p><strong><a href=https://pub.dev/packages/auto_size_text>auto_size_text</a> 文字自適應</strong></p></li><li><p><strong><a href=https://pub.dev/packages/fl_chart>fl_chart</a> 圖表顯示</strong></p></li><li><p><strong><a href=https://pub.dev/packages/flutter_local_notifications>flutter_local_notifications </a>推播</strong></p></li><li><p><strong><a href=https://pub.dev/packages/awesome_notifications>awesome_notifications</a>推播</strong></p></li><li><p><strong><a href=https://pub.dev/packages/hive/example>hive</a> 儲存相關 <a href=https://blog.csdn.net/weixin_26739079/article/details/108498942>範例說明</a></strong></p></li><li><p><strong><a href=https://pub.dev/packages/flutter_gherkin>flutter_gherkin</a> 自動化測試BDD</strong></p></li><li><p><strong>[firebase_crashlytics ] (<a href=https://pub.dev/packages/firebase_crashlytics/example>https://pub.dev/packages/firebase_crashlytics/example</a>) 紀錄CRASH LOG (<a href=https://ithelp.ithome.com.tw/articles/10197520>範例說明</a>）</strong></p></li><li><p><strong><a href=https://pub.dev/packages/http_interceptor>http_interceptor 1.0.2</a> 攔截器</strong></p><ul><li><p>先建立自己的interceptor
+<img src=https://i.imgur.com/KvwfrR2.png alt></p></li><li><p>將interceptor掛到client上
+<img src=https://i.imgur.com/dHzLpuc.png alt></p></li></ul></li><li><p><strong><a href=https://pub.dev/packages/go_router>go_router</a> 路由管理</strong></p></li><li><p><strong><a href=https://pub.dev/packages/routemaster>routemaster</a></strong></p></li></ul><h2 id=官方>官方</h2><ul><li><strong><a href=https://docs.flutter.dev/cookbook/design/drawer>Drawer</a> 選單</strong></li></ul><h2 id=參考文件>參考文件</h2><ul><li><a href=https://medium.com/flutter-taipei/%E4%BE%86%E5%90%A7-flutter-6-%EF%BD%97idget%E7%9A%84%E9%AA%A8%E6%9E%B6-scaffold%E9%A1%9E%E5%88%A5-c8bc382c5b53>Scafflod</a></li><li><a href=https://medium.com/flutter-taipei/%E4%BD%BF%E7%94%A8-camera-%E4%BE%86%E6%8B%8D%E7%85%A7%E5%90%A7-flutter-%E7%AF%87-1dcdb6601a4e>Camera</a></li><li><a href=https://book.flutterchina.club/chapter7/futurebuilder_and_streambuilder.html#_7-6-1-futurebuilder>異步UI更新</a></li><li><a href=https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/646870/>循環機制</a></li><li><a href=https://www.liujunmin.com/flutter/gesture/gesture_detector.html>GestureDetector手勢參考</a></li></ul><h2 id=工具>工具</h2><ul><li><strong><a href=https://javiercbk.github.io/json_to_dart/>Json to Dart </a></strong>Class Generator</li><li><strong><a href=https://appicon.co/#app-icon>AppIconGenerator</a> 產生AppIcon</strong></li></ul><p>Android Icon
+Flutter -> android -> app -> src -> main -> res -> 圖片對應路徑
+iOS Icon
+Flutter ->iOS -> Runner -> Assets.xcassets -> 圖片對應路徑
+(Contents.json => 必要檔案)</p><h2 id=flutter-app-life-cycle>Flutter App Life Cycle</h2><p><strong><a href=https://juejin.cn/post/7036557395497074718>Flutter App生命週期</a></strong></p><h2 id=ios打包發佈相關>iOS打包發佈相關</h2><p><strong><a href=https://medium.com/%E5%BD%BC%E5%BE%97%E6%BD%98%E7%9A%84-swift-ios-app-%E9%96%8B%E7%99%BC%E5%95%8F%E9%A1%8C%E8%A7%A3%E7%AD%94%E9%9B%86/%E6%96%B0%E5%A2%9E-iphone-%E6%A8%A1%E6%93%AC%E5%99%A8-simulator-7f5c65a08f97>模擬器尺寸相關</a></strong></p><ol><li>確認程式碼可以Build成功</li><li>確認環境 (下圖範例為uat)
+(IOS打包的時候,僅能透過Any Devices和實體機,不可用模擬器打包)
+<img src=https://i.imgur.com/pDhsoKj.png alt></li><li>設定版號
+<img src=https://i.imgur.com/5jbzcTG.png alt></li><li>打包
+<img src=https://i.imgur.com/QBcM0kU.png alt></li><li>發布
+<img src=https://i.imgur.com/brsNZpK.png alt></li><li>依需求選擇後續設置直到 Upload 完成</li></ol><p>Archive Manager(管理打包後的檔案)
+Windows -> Organizer</p><h2 id=android>Android</h2><ul><li><p>Android檔案傳輸
+<strong><a href=https://www.android.com/filetransfer/>檔案傳輸工具</a></strong></p></li><li><p>手機安裝APK
+cd Library/Android/sdk/platform-tools
+adb install -r 將檔案拖曳進Terminal</p></li><li><p>手機截圖
+adb shell screencap -p /sdcard/Download/s1.png
+adb pull /sdcard/Download/s1.png</p></li><li><p>手機錄影
+adb shell screenrecord /sdcard/Download/d1.mp4
+control +c
+adb pull /sdcard/Download/d1.mp4</p></li><li><p><a href=https://www.peko-step.com/zhtw/tool/pixelate.html>線上馬賽克</a></p></li></ul><ol><li>確認程式碼可以Build成功</li><li>確認Version.properties 版本號</li><li>產生Apk檔
+<img src=https://i.imgur.com/T1sakjW.png alt>
+<img src=https://i.imgur.com/aPYDPuU.png alt>
+<img src=https://i.imgur.com/wsZurDO.png alt></li><li>執行完畢後至Firebase將檔案上傳即可</li></ol><h2 id=flutter-key的作用>Flutter Key的作用</h2><p><a href=https://www.jianshu.com/p/57debb89a24f>Flutter Widget Key的作用</a></p><h2 id=推播>推播</h2><pre tabindex=0><code class="language-=flutter" data-lang="=flutter">FirebaseMessaging.onMessage.listen((RemoteMessage message) async {
+      if (message.notification != null) {
+        Clipboard.setData(
+            ClipboardData(text: &#34;keys :&#34; + message.data.keys.first ?? &#34;none&#34;));
+        Future.delayed(const Duration(seconds: 3), () {});
+      }
+    });
+    FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
+</code></pre><hr><h2 id=檔案容量處理>檔案容量處理</h2><pre tabindex=0><code class="language-=flutter" data-lang="=flutter">getFileSize(String filepath, int decimals) async {
+  var file = File(filepath);
+  int bytes = await file.length();
+  if (bytes &lt;= 0) return &#34;0 B&#34;;
+  const suffixes = [&#34;B&#34;, &#34;KB&#34;, &#34;MB&#34;, &#34;GB&#34;, &#34;TB&#34;, &#34;PB&#34;, &#34;EB&#34;, &#34;ZB&#34;, &#34;YB&#34;];
+  var i = (log(bytes) / log(1024)).floor();
+  var gg =
+      ((bytes / pow(1024, i)).toStringAsFixed(decimals)) + &#39; &#39; + suffixes[i];
+  return ((bytes / pow(1024, i)).toStringAsFixed(decimals)) + &#39; &#39; + suffixes[i];
+}
+</code></pre><p>1 byte = 8 bits
+1KB (kilobyte) = 1024b
+1MB (megabyte) = 1024KB
+1GB (Gigabyte) = 1024MB
+1TB (trillionbyte) = 1024gb
+1PB (petabyte, billions of bytes, beat bytes) = 1024tb
+1eb (Exabyte) = 1024pb
+1zb (zettabyte) = 1024eb
+1yb (yottabyte, 100 million bytes, Yao bytes) = 1024zb
+1BB (brontobyte) = 1024yb</p><pre tabindex=0><code>小技巧： 
+限制檔案大小上限時,不應該把檔案容量寫的與限制規格剛好,有時候檔表頭會有些META DATA 會造成太剛好的檔案上傳後檔案變大而上傳失敗！
+舉例：  限制3MB檔案上傳,建議限制2.96MB
+</code></pre><p><a href=https://www.gbmb.org/mb-to-bytes>容量轉換</a></p><p><a href=https://sample-videos.com/download-sample-jpg-image.php>檔案測試來源網站</a></p><hr><p><strong><a href=https://www.gushiciku.cn/pl/gmiz/zh-tw>生命週期監聽</a></strong></p><ul><li>const & final 差異<ul><li>Final 宣告的 property 是在專案執行（run time）階段的常數。</li><li>Constant 宣告的 property 是在專案編譯（compile time）階段的常數。<pre tabindex=0><code class="language-=flutter" data-lang="=flutter">final date1 = DateTime.now(); 
+const date2 = DateTime.now(); // Compile error
+</code></pre></li></ul></li></ul><hr><h2 id=正則>正則</h2><p><a href=https://stackoverflow.com/questions/56253787/how-to-handle-textfield-validation-in-password-in-flutter>參考來源</a></p><p>範例（最少輸入八碼,必須包含大小寫英文及數字）：</p><pre tabindex=0><code class="language-=flutter" data-lang="=flutter">  bool isMatch(String password) {
+    RegExp regExpStr = RegExp(r&#39;^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$&#39;);
+    return regExpStr.hasMatch(password);
+  }
+</code></pre><pre tabindex=0><code>r&#39;^
+  (?=.*[A-Z])       // should contain at least one upper case
+  (?=.*[a-z])       // should contain at least one lower case
+  (?=.*?[0-9])      // should contain at least one digit
+  (?=.*?[!@#\$&amp;*~]) // should contain at least one Special character
+  .{8,}             // Must be at least 8 characters in length  
+$
+</code></pre><h2 id=排序>排序</h2><p><strong><a href=https://www.kindacode.com/article/sorting-lists-in-dart/>Sort</a></strong></p><h2 id=上架>上架</h2><p><strong><a href=https://medium.com/@justtryit518/%E6%89%8B%E6%8A%8A%E6%89%8Bios-app%E8%87%AA%E5%8B%95%E5%8C%96%E6%89%93%E5%8C%85-fastlane-b32427dd642a>Fastlane自動打包發布-1</a></strong></p><p><strong><a href=https://www.jianshu.com/p/e3615b6f193c>Fastlane自動打包發布-2</a></strong></p><p>1.xcode-select &ndash;install
+2.sudo gem install fastlane
+3.到專案資料夾[IOS OR Android]
+4.打開fastlane -> fasefile 看指令</p><ul><li>fastlane uat</li></ul><pre tabindex=0><code>過程中遇到問題可能要更新一些東西
+fastlane install_plugins
+bundle exec fastlane update_plugins
+</code></pre><ul><li>iOS<ul><li><strong><a href=https://www.tpisoftware.com/tpu/articleDetails/2448>Core Data</a></strong></li></ul></li></ul><h2 id=憑證>憑證</h2><p>IOS安裝憑證時,需要至官方網站</p><p><strong><a href=https://www.apple.com/certificateauthority/>APPLE官方憑證</a></strong></p><h2 id=封包攔截>封包攔截</h2><ul><li><strong><a href=https://community.tealiumiq.com/t5/Tealium-for-Android/Setting-up-Charles-to-Proxy-your-Android-Device/ta-p/5121>Charles</a></strong></li></ul><h2 id=xcode環境>XCode環境</h2><p><strong><a href=https://ali-akhtar.medium.com/managing-different-environments-using-xcode-build-schemes-and-configurations-af7c43f5be19>新增Config</a></strong></p><p><img src=https://i.imgur.com/uALGT8Y.png alt></p><p>Explicit = 只能獨一無二 （通常是域名的反解）
+Wildcard = 可重複使用,但是上架不能用</p><p>1.Identify
+2.Profile
+<img src=https://i.imgur.com/YLgebn0.png alt>
+Member ship
+Certificate
+Expire date</p><p>發布用的Certificate一個公司最多三張</p><p><img src=https://i.imgur.com/fV0ahJC.png alt></p><h2 id=elk>ELK</h2><p>在呼叫API時,寫入log到txt,在Post時,把txt內的log讀出來整理,post時在一次送出</p><ul><li><p>為何不在每次呼叫API就寫LOG到ELK?
+如果使用者在呼叫API的過程中,手機網路異常或者有其他因素影響,會造成這個log沒有被記錄下來,而透過寫入log到txt的方式,可以透過排程補送log,查詢之前造成異常的原因,一方面也避免頻繁送log</p></li><li><p>注意事項</p><ul><li>資料結構需要百分之百相同(ELK需要的格式)</li><li>Content-Type和Auth要設定</li><li>資料在送出後,透過Flutter Console,印出來的資料前後有 "" 實際送出不會有""</li></ul></li></ul><p>Content-Type 在發送排程Log時需要使用<code>application/vnd.api+json</code>
+但是在Flutter原生的http client在Post的時候會把Content-Type加上charset,變成 <code>application/vnd.api+json; charset=utf-8</code> 造成status code 回傳成功
+(200 or 201) 但是Kibana沒有資料寫入
+<a href=https://github.com/dart-lang/http/issues/184>參考網址</a></p><p>解法:透過<a href=https://pub.dev/packages/dio>Dio</a>來發送Post請求</p><pre tabindex=0><code class="language-=flutter" data-lang="=flutter">//key = LogstashEventHubToken
+//resourceUri = host 
+String createToken(String resourceUri, String keyName, String key) {
+  var timespan = (DateTime.now().millisecondsSinceEpoch / 1000).round();
+  var week = 60 * 60 * 24 * 7;
+  var expiry = (timespan + week).toString();
+
+  String stringToSign = Uri.encodeFull(resourceUri) + &#34;\n&#34; + expiry;
+
+  var keyBytes = utf8.encode(key);
+  var hmacSha256 = Hmac(sha256, keyBytes); //
+
+  var signature = base64
+      .encode(hmacSha256.convert(utf8.encode(stringToSign)).bytes)
+      .toString();
+
+  var sasToken = &#34;SharedAccessSignature sr=&#34; +
+      Uri.encodeComponent(resourceUri) +
+      &#34;&amp;sig=&#34; +
+      Uri.encodeComponent(signature) +
+      &#34;&amp;se=&#34; +
+      expiry +
+      &#34;&amp;skn=&#34; +
+      keyName;
+  return sasToken;
+}
+</code></pre><h2 id=鍵盤>鍵盤</h2><ul><li>收鍵盤</li></ul><pre tabindex=0><code class=language-flutter data-lang=flutter>GestureDetector(
+behavior: HitTestBehavior.translucent,
+onTap: () {
+            FocusScope.of(context).unfocus();
+          })
+ 
+</code></pre><ul><li>Resize頁面造成鍵盤出現時將既有元件</li></ul><pre tabindex=0><code>In your Scaffold, set **resizeToAvoidBottomPadding** property to **false**.
+</code></pre><h2 id=android-權限設定>Android 權限設定</h2><ul><li><a href=https://stackoverflow.com/questions/51902629/how-to-allow-all-network-connection-types-http-and-https-in-android-9-pie>HTTPS</a></li><li><a href=https://codertw.com/android-%E9%96%8B%E7%99%BC/345051/>手機權限設定</a></li></ul><h2 id=flutter-flow>Flutter flow</h2><ul><li><p><a href=https://flutterflow.io>線上工具,快速產生Flutter</a></p></li><li><p><a href=https://wordhtml.com>文章生成HTML</a></p></li></ul><h2 id=app內顯示文章>App內顯示文章</h2><ul><li>WebView 隱私權條款</li></ul><p>JavascriptMode.unrestricted 在WebView內啟用JavaScript ,
+JavaScript預設是關閉的,若沒有啟用可能導致某些網頁顯示不出來</p><pre tabindex=0><code class="language-=flutter" data-lang="=flutter">class PrivacyPolicyScreen extends StatefulWidget {
+  const PrivacyPolicyScreen({Key? key}) : super(key: key);
+
+  @override
+  _PrivacyPolicyScreenState createState() {
+    return _PrivacyPolicyScreenState();
+  }
+}
+
+class _PrivacyPolicyScreenState extends State&lt;PrivacyPolicyScreen&gt; {
+
+//建立Controller
+  final Completer&lt;WebViewController&gt; _controller =
+      Completer&lt;WebViewController&gt;();
+
+  @override
+  Widget build(BuildContext context) {
+    _loadHtmlFromAssets();
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: xeBlue,
+        elevation: 0,
+        leading: (GestureDetector(
+          behavior: HitTestBehavior.opaque,
+          //上一頁
+          child: Container(
+            padding: const EdgeInsets.all(12),
+            child: getImage(&#34;assets/images/new/icon_arrow_back.png&#34;,
+                color: Colors.white, width: 30, height: 30, fit: BoxFit.fill),
+          ),
+          onTap: () {
+            Navigator.pop(context);
+          },
+        )),
+      ),
+      //實際呼叫WebView
+      body: WebView(
+        initialUrl: &#39;https://flutter.dev&#39;,
+        onWebViewCreated: (WebViewController webViewController) {
+          _controller.complete(webViewController);
+        },
+      ),
+    );
+  }
+
+//準備html App內顯示
+  _loadHtmlFromAssets() async {
+    String fileText =
+        await rootBundle.loadString(&#39;assets/privacy/privacy.html&#39;);
+    _controller.future.then((value) =&gt; value.loadHtmlString(fileText));
+  }
+}
+</code></pre><h2 id=色碼轉換>色碼轉換</h2><p><a href="https://convertingcolors.com/hex-color-E5F0F9.html?search=#e5f0f9">色碼轉換</a></p><h2 id=gitflow>GitFlow</h2><p>hotfix 完成 => dev 完成 => main 發版</p><h2 id=圖片>圖片</h2><p><strong><a href=https://ithelp.ithome.com.tw/articles/10234433>Image Widget</a></strong></p><p><strong><a href=https://blog.csdn.net/tianhongfan10106/article/details/120940320>Box.fit</a></strong></p><h2 id=android-1>Android</h2><p><a href="https://developer.android.com/studio/build/multidex?hl=zh-cn">为方法数超过 64K 的应用启用 MultiDex</a></p><p><a href=https://quickpon.top/questions/firebase/i-flutter-22027-missingpluginexceptionno-implementation-found-for-method-doc/>multidex</a></p><h2 id=ios>iOS</h2><ul><li>CADisableMinimumFrameDurationOnPhone
+<a href=https://www.gushiciku.cn/pl/aiV1/zh-tw>螢幕刷新率</a></li></ul><h2 id=佈局>佈局</h2><p>Row 在自適應寬度時,要設定<strong>mainAxisSize: MainAxisSize.min</strong>不然就要設定父層寬度</p><pre tabindex=0><code class=language-flutter data-lang=flutter> Container(
+        padding: const EdgeInsets.only(left: 20, right: 20),
+        child: Row(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              CustomizeImageAsset(&#34;assets/images/new/icon_exclamation_mark.png&#34;,
+                  height: 20 * heightScale, width: 20 * heightScale),
+              const SizedBox(
+                width: 8,
+              ),
+              CustomizeText(
+                text: tr(&#34;PT_PleaseCheckWithinTheSetRange&#34;),
+                color: xeErrorRed,
+                fontSize: 17,
+                align: TextAlign.center,
+              )
+            ]),
+      )
+</code></pre><p>ListView 如果要依照放入的物件自適應高度則可以設定,如下圖放入四個語系字串。
+<code>shrinkWrap: true</code></p><p><img src=https://i.imgur.com/8EfUI0H.png alt></p><h2 id=鎖定轉向>鎖定轉向</h2><p><a href=https://clay-atlas.com/blog/2021/03/27/flutter-cn-screen-orientation-settings/>螢幕轉向</a></p><pre tabindex=0><code class="language-=flutter" data-lang="=flutter">await _controller.lockCaptureOrientation(); //CameraController 
+</code></pre><h2 id=演算法相關>演算法相關</h2><ul><li><strong><a href=https://iter01.com/136652.html>LinkedNode</a></strong></li></ul><h2 id=資安>資安</h2><ul><li><strong><a href=https://ithelp.ithome.com.tw/articles/10215522>MobSF</a></strong></li></ul><h2 id=取得路徑>取得路徑</h2><ul><li>path_provider
+<a href=https://blog.csdn.net/shuzhuchengfu/article/details/107941372>取得路徑</a></li></ul><h2 id=建立資料夾>建立資料夾</h2><p><a href=https://medium.com/@mibcoder/folder-creation-in-flutter-a554c238b7e8>建立資料夾</a></p><h2 id=圖片閃爍>圖片閃爍</h2><p><a href=https://blog.csdn.net/BFELFISH/article/details/112919522>解決照片閃爍</a>
+<img src=https://i.imgur.com/9ovtYJ5.png alt></p><p><a href=https://juejin.cn/post/6850037273644236813>圖片</a></p><h2 id=無法打開iproxy>無法打開iproxy</h2><p><a href=https://www.jianshu.com/p/4f7817d0f5f9>無法打開iproxy</a></p><h2 id=scroll滾動捲動>Scroll（滾動、捲動）</h2><p><a href=https://cloud.tencent.com/developer/article/1516957>ScrollPhysics</a></p><h2 id=取得當前國家代碼>取得當前國家代碼</h2><p>原生Flutter作法：</p><pre tabindex=0><code class="language-=flutter" data-lang="=flutter">WidgetsBinding.instance.window.locale.countryCode
+</code></pre><pre tabindex=0><code class="language-=flutter" data-lang="=flutter"> String getCountryCode() {
+    return WidgetsBinding.instance.window.locale.countryCode;
+  }   //台灣取得&#34;TW&#34;  大陸取得&#34;CN&#34;
+</code></pre><hr><p>其他做法:
+<a href=https://stackoverflow.com/questions/57977167/device-country-in-flutter>https://stackoverflow.com/questions/57977167/device-country-in-flutter</a></p><p>引用
+geolocator: ^5.1.1
+geocoder: ^0.2.1</p><pre tabindex=0><code class="language-=flutter" data-lang="=flutter">Future&lt;String&gt; getCountryName() async {
+    Position position = await Geolocator().getCurrentPosition(desiredAccuracy: LocationAccuracy.high); //取得當前經緯度
+    final coordinates = new Coordinates(position.latitude, position.longitude);
+    var addresses = await Geocoder.local.findAddressesFromCoordinates(coordinates);
+    var first = addresses.first;
+    return first.countryName; // this will return country name
+}
+</code></pre><p>但是要注意 大陸地區無法使用這個方案，geocoder目前已沒有在維護</p><p><img src=https://i.imgur.com/vZuC7M1.png alt></p><p>有出一個 geocder2 有Null safety的版本，不過需要透過Google Map在大陸地區無法使用。</p><p><img src=https://i.imgur.com/bGd2jSe.png alt></p><h2 id=單元測試>單元測試</h2><p><a href=https://lihsinplayer.medium.com/flutter-%E5%A6%82%E4%BD%95%E5%AF%AB%E6%B8%AC%E8%A9%A6%E6%A1%88%E4%BE%8B-5a41bad314fb>單元測試</a></p><h2 id=路由管理>路由管理</h2><p><a href=https://ithelp.ithome.com.tw/articles/10260087>路由管理</a></p><h2 id=自定義快捷bottomnavigationbar>自定義快捷(BottomNavigationBar)</h2><p><a href=https://ithelp.ithome.com.tw/articles/10260093>BottomNavigationBar</a></p><h2 id=新專案>新專案</h2><ul><li>啟用新專案時，會有大量註解，可以透過 Ctrl+F 搜尋 <code>//.* </code>用空字串替換掉，如下圖</li><li><img src=https://i.imgur.com/4mxTjmH.png alt></li></ul><h2 id=bloc>BLOC</h2><p><a href=https://blog.logrocket.com/persisting-application-state-hydrated-bloc-flutter/>hydrated-bloc</a></p><p><a href=https://rene-tsai.medium.com/flutter-cubit%E4%BB%8B%E7%B4%B9-bloc%E5%84%AA%E7%BC%BA%E6%AF%94%E8%BC%83-555bae221f9>Cubi & Bloc</a></p><pre tabindex=0><code>async gives you a Future
+async* gives you a Stream
+</code></pre><h2 id=模擬器鍵盤>模擬器&鍵盤</h2><ul><li><p>iOS Simulator 鍵盤如果預設被關閉，在做Flutter TextField 時，會變成這樣如下圖
+<img src=https://i.imgur.com/6dZ0Fr9.png alt></p></li><li><p>可以透過Command+K 啟用鍵盤</p></li></ul><p><img src=https://i.imgur.com/6IsEAH3.png alt></p><ul><li>啟用結果如下圖</li></ul><p><img src=https://i.imgur.com/gw5LGlw.png alt></p><hr><ul><li><p>若鍵盤被遮蔽如下圖，可以透過 <code>isScrollControlled</code>來控制，如下圖
+<img src=https://i.imgur.com/iZUF0Ft.png alt></p></li><li><p>可以透過<code>flutter isScrollControlled:true</code> 避免鍵盤被遮蔽如下圖
+<img src=https://i.imgur.com/3AVA1iN.jpg alt></p></li></ul></div><div class=post-footer></div></article></main></body></html>

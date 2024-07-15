@@ -1,0 +1,37 @@
+<!doctype html><html lang=zh-tw><head><title>S.O.L.I.D原則 // Siaoyu's Blog</title>
+<link rel="shortcut icon" href=/favicon.ico><meta charset=utf-8><meta name=generator content="Hugo 0.128.2"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content="John Doe"><meta name=description content="S.O.L.I.D原則"><link rel=stylesheet href=/css/main.min.5b1fcc8902588589c4767187402a3c29f8b8d7a6fdef6d9f8f77045bb0d14fee.css><meta name=twitter:card content="summary"><meta name=twitter:title content="S.O.L.I.D原則"><meta name=twitter:description content="S.O.L.I.D原則"><meta property="og:url" content="https://ococo246453.github.io/posts/s.o.l.i.d%E5%8E%9F%E5%89%87/"><meta property="og:site_name" content="Siaoyu's Blog"><meta property="og:title" content="S.O.L.I.D原則"><meta property="og:description" content="S.O.L.I.D原則"><meta property="og:locale" content="zh_tw"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2022-10-25T17:35:45+00:00"><meta property="article:modified_time" content="2022-10-25T17:35:45+00:00"><meta property="article:tag" content="後端"></head><body><header class=app-header><a href=https://ococo246453.github.io/><img class=app-header-avatar src=/avatar.jpg alt="John Doe"></a>
+<span class=app-header-title>Siaoyu's Blog</span><p>由後端轉職為App工程師的開發者。 聯絡我：ococo246453@gmail.com</p><div class=app-header-social><a href=https://github.com/ococo246453 target=_blank rel="noreferrer noopener me"><svg viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github"><title>Github</title><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77 5.44 5.44.0 003.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"/></svg>
+</a><a href=https://www.facebook.com/ococo246453 target=_blank rel="noreferrer noopener me"><svg viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-facebook"><title>Facebook</title><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+</a><a href=mailto:ococo246453@gmail.com target=_blank rel="noreferrer noopener me"><svg viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-link"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></a></div></header><main class=app-container><article class=post><header class=post-header><h1 class=post-title>S.O.L.I.D原則</h1><div class=post-meta><div><svg viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar"><title>calendar</title><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+Oct 25, 2022</div><div><svg viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock"><title>clock</title><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+1 min read</div><div><svg viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag"><title>tag</title><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83.0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+<a class=tag href=https://ococo246453.github.io/tags/%E5%BE%8C%E7%AB%AF/>後端</a></div></div></header><div class=post-content><h1 id=solid原則>S.O.L.I.D原則</h1><p>講師： Will保哥</p><p>課程：.NET 技術講座：打造堅固耐用的 C# 程式碼</p><p>圖片來源: Will保哥 .NET 技術講座：打造堅固耐用的 C# 程式碼 課程投影片</p><ul><li>耦合度<blockquote><p>耦合度越高,代表程式之間的相依性越高,容易造成改A壞B的情況(==耦合是不可避免的==)</p></blockquote></li><li>內聚力<blockquote><p>在一個模組內只完成一件事情,意味著這個模組可以被重複利用(例如發送通知)
+低內聚的表現,意味著將所有的功能都寫在同一個class,造成難以維護、理解</p></blockquote></li></ul><p><strong>內聚力越高,類別越多,耦合度會增加</strong></p><p><strong>耦合度越低,類別越少,內聚力降低</strong></p><blockquote><p>兩者是互相衝突的,要靠當下的情境來判定使用</p></blockquote><h2 id=學習solid物件導向設計原則的好處>學習S.O.L.I.D物件導向設計原則的好處</h2><ul><li>降低程式碼複雜度</li><li>較佳的程式碼可讀性</li><li>提升模組可重複利用姓</li><li>使模組具有高內聚低耦合</li><li>面臨需求變更時可減少破壞現有模組的風險</li></ul><h2 id=solid>S.O.L.I.D</h2><ul><li><p>單一責任原則SRP (Single Responsibility Principle)</p><blockquote><p>SRP主要精神就是提高內聚力。每個類別盡量只做一件事。</p><ul><li>常見問題：
+1.類別複雜度過高
+2.維護時找不到要改哪
+3.發生邏輯問題時找不到Bug在哪
+4.使用類別時不知道應該呼叫哪個方法</li></ul></blockquote><ul><li>使用時機：<ol><li>在確認需求的情況下,如果只有一個類別需要用到這個方法,那就==不需要額外拉出==一個新的類別來為了做到SRP。</li><li>類別中有一段程式碼有重複利用的需求。</li><li>系統中有非必要的功能(未來的需求),老闆逼你要實作時,責任會依附在類別中,對維護造成困擾,這時候就可以透過SRP來實作。
+<img src=https://i.imgur.com/MqBxjjn.png alt>
+<img src=https://i.imgur.com/V8OomLG.png alt>
+<img src=https://i.imgur.com/GTxGKTO.png alt></li></ol></li></ul></li><li><p>開放封閉原則OCP (Open Closed Principle)</p><blockquote><p>開放擴充但封閉修改
+藉由新的程式碼來擴充系統的功能,而不是藉由修改已存在的程式碼來擴充系統</p></blockquote><ul><li>OCP的使用時機：</li></ul><blockquote><p>既有的類別已經被清楚定義,處於一個強調穩定的狀態
+需要擴充現有的類別,加入新的屬性或方法
+擔心修改現有的程式碼會破壞現有系統的運作
+系統開始設計時就決定要採用OCP模式
+==可以透過"介面"或"抽象類別"進行實作==</p></blockquote></li><li><p>里氏替換原則LSP (Liskov Substitution Principle)</p><blockquote><p>建議使用==介面==來實作LSP,來降低耦合度。
+LSP在實作時,要注意,實作的方式是否正確
+==子類別替換基底類別的時候不會報錯==</p></blockquote></li><li><p>介面隔離原則ISP (Interface Segregation Principle)</p><blockquote><p>把不同的屬性和方法,放在不同的介面中
+特定需求沒用到的方法,不要加入介面中
+使系統可以容易的達成鬆散耦合,安全重構,功能擴充</p></blockquote><ul><li>ISP的使用時機：</li></ul><blockquote><p>當介面需要被分割的時候
+假設類別有20個方法,並實作一個有15個方法的介面
+有某個用戶端只會使用該類別中的10個方法
+你就可以為這類別的10個方法定義介面並設定實作介面
+你的用戶端就可以改用介面操作
+這個過程可以用來降低主程式與這個類別的耦合力</p></blockquote></li><li><p>不符合ISP介面隔離原則,==BeginTransaction沒有被使用到==
+<img src=https://i.imgur.com/KXNgQgv.png alt></p></li><li><p>符合ISP介面隔離原則,==沒有用到的方法應該額外獨立出來==
+<img src=https://i.imgur.com/Lsk9UfS.png alt></p></li><li><p>讓使用者可以自行決定要實作哪個介面,若使用不存在的則會報錯
+<img src=https://i.imgur.com/Fxiy1AF.png alt></p></li><li><p>相依反轉原則DIP (Dependency Inversion Principle)</p><blockquote><p>所有類別都要相依於抽象,而不是具體實作
+可透過DI Container達到目的
+為了要達到類別間鬆散耦合的目的
+開發過程中,所有類別之間的耦合關係一律透過抽象介面
+<img src=https://i.imgur.com/MpdhbBk.png alt></p></blockquote><ul><li>關於DIP的實作方式</li><li>型別全部都相依於抽象,而不是具體實作</li><li>經過套用DIP之後,原來有相依於類別的程式碼</li><li>都改成相依於抽象型別</li><li>從緊密耦合的關係變成鬆散耦合關係</li><li>可以依據需求,隨時抽換具體實作類別</li></ul><blockquote><p>關於DIP的使用時機：</p><ul><li>想要降低耦合的時後</li><li>希望類別都相依於抽象,讓團隊更有效率的開發系統</li><li>想要可以替換具體實作,讓系統變得更有彈性</li><li>符合DIPP通常也意味者符合OCP與LSP原則</li><li>只要再多考量SRP與ISP就很棒了</li><li>想要導入TDD或單元測試的時候</li></ul></blockquote></li></ul></div><div class=post-footer></div></article></main></body></html>
