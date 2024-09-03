@@ -1,23 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>技能 on Siaoyu&#39;s Blog</title>
-    <link>https://ococo246453.github.io/tags/%E6%8A%80%E8%83%BD/</link>
-    <description>Recent content in 技能 on Siaoyu&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Tue, 25 Oct 2022 17:35:45 +0000</lastBuildDate><atom:link href="https://ococo246453.github.io/tags/%E6%8A%80%E8%83%BD/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Hugo_架設自己的部落格 - Mac version</title>
-      <link>https://ococo246453.github.io/posts/hugo_%E6%9E%B6%E8%A8%AD%E8%87%AA%E5%B7%B1%E7%9A%84%E9%83%A8%E8%90%BD%E6%A0%BC-mac-version/</link>
-      <pubDate>Tue, 25 Oct 2022 17:35:45 +0000</pubDate>
-      
-      <guid>https://ococo246453.github.io/posts/hugo_%E6%9E%B6%E8%A8%AD%E8%87%AA%E5%B7%B1%E7%9A%84%E9%83%A8%E8%90%BD%E6%A0%BC-mac-version/</guid>
-      <description>[Hugo]架設自己的部落格 - Mac version 安裝需要的工具 安裝 Homebrew （這邊要注意Intel chip / Apple chip 安裝方式略有不同，本文將以Apple chip 做示範） 首先開啟終端機，並執行 /bin/bash -c &amp;quot;$(curl -fsSL https://gitee.com/ineo6/homebrew-install/raw/master/install.sh)&amp;quot;
-在終端機透過 echo $SHELL的顯示結果修改環境變數，以下圖為例，顯示結果為 /bin/zsh 。 透過cd $home 回到根目錄，並執行nano .zshrc ，將 echo &amp;#39;eval &amp;#34;$(/opt/homebrew/bin/brew shellenv)&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.zprofile eval &amp;#34;$(/opt/homebrew/bin/brew shellenv)&amp;#34; 加入，執行 control+x 提示是否修改Y 按下 Enter(return) 離開編輯器。
-執行source ~/.zshrc套用剛剛的修改，或者重啟終端機。 開啟終端機，執行brew -v顯示安裝好的Homebrew版本，確認是否安裝成功。 2.安裝 Hugo
-在安裝前，先確認是否有安裝 Homebrew 前往 Hugo 依照對應的作業系統教學指示安裝，本篇文主要是以MacOS為主， 確認 Homebrew 有安裝成功後，執行brew install hugo等待安裝完成。 建立部落格 到想要的路徑執行hugo new site {名稱} 執行完畢後，會在該路徑產出{名稱}的資料夾，內容如下圖 挑選主題 前往 Hugo Theme 挑選想要套用的主題 以筆者為例 選擇 Hugo Theme m10c 作為套用的主題，在選擇主題時，建議注意 Updated 日期，確認作者還有在持續維護，也可以透過GitHub Stars來作為考量依據，確認無誤後，點擊Download前往GitHub。 3.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技能 on Siaoyu's Blog</title><link>https://ococo246453.github.io/tags/%E6%8A%80%E8%83%BD/</link><description>Recent content in 技能 on Siaoyu's Blog</description><generator>Hugo</generator><language>zh-tw</language><lastBuildDate>Tue, 03 Sep 2024 17:35:45 +0000</lastBuildDate><atom:link href="https://ococo246453.github.io/tags/%E6%8A%80%E8%83%BD/index.xml" rel="self" type="application/rss+xml"/><item><title>從零開始學習 Git：Mac 使用者的完整指南</title><link>https://ococo246453.github.io/posts/%E5%BE%9E%E9%9B%B6%E9%96%8B%E5%A7%8B%E5%AD%B8%E7%BF%92-gitmac-%E4%BD%BF%E7%94%A8%E8%80%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97/</link><pubDate>Tue, 03 Sep 2024 17:35:45 +0000</pubDate><guid>https://ococo246453.github.io/posts/%E5%BE%9E%E9%9B%B6%E9%96%8B%E5%A7%8B%E5%AD%B8%E7%BF%92-gitmac-%E4%BD%BF%E7%94%A8%E8%80%85%E7%9A%84%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97/</guid><description>從零開始學習 Git：Mac 使用者的完整指南 目錄 從零開始學習 Git：Mac 使用者的完整指南 目錄 簡介 安裝 Homebrew 安裝 Git 基本設定 創建第一個 Git 倉庫 基本 Git 操作 添加文件 提交更改 查看提交歷史 分支管理 創建新分支 切換分支 創建並切換到新分支 合併分支 遠端倉庫操作 添加遠端倉庫 推送到遠端 從遠端拉取 進階技巧 常見問題解答 結語 參考資源 簡介 Git 是一個強大的分散式版本控制系統，廣泛應用於軟體開發。它能夠追蹤文件的變化，協調多人協作，並且可以輕鬆地回溯到之前的版本。本指南旨在幫助 Mac 用戶從零開始學習 Git，掌握基本概念和操作，逐步成為熟練的 Git 使用者。
+安裝 Homebrew Homebrew 是 Mac 上非常流行的套件管理工具，它可以幫助我們輕鬆安裝和管理各種軟體，包括 Git。以下是安裝 Homebrew 的步驟：
+打開終端機（Terminal）應用程式。你可以在 Finder 中的&amp;quot;應用程式&amp;quot; &amp;gt; &amp;ldquo;工具&amp;quot;找到它，或者使用 Spotlight（按下 Command + 空白鍵）搜索 &amp;ldquo;Terminal&amp;rdquo;。
+複製並貼上以下命令到終端機中：
+/bin/bash -c &amp;#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&amp;#34; 按下 Enter 鍵執行命令。系統可能會要求你輸入管理員密碼。</description></item></channel></rss>
